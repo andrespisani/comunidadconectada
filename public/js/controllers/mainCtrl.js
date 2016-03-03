@@ -1,6 +1,6 @@
-// Creates the addCtrl Module and Controller. Note that it depends on the 'geolocation' and 'gservice' modules and controllers.
-var addCtrl = angular.module('addCtrl', []);
-addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, gservice){
+// Creates the mainCtrl Module and Controller. Note that it depends on the 'geolocation' and 'gservice' modules and controllers.
+// var mainCtrl = angular.module('mainCtrl', []);
+app.controller('mainCtrl', function($scope, $http, $rootScope, geolocation, gservice){
 
     // Initializes Variables
     // ----------------------------------------------------------------------------
