@@ -1,0 +1,28 @@
+{
+  "name": "comunidadconectada",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "pachirulo <pachirulo@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/pachirulo/comunidadconectada",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "angularjs-geolocation": "~0.1.1",
+    "bootstrap": "~3.3.6",
+    "modernizr": "~3.3.1"
+  }
+}
