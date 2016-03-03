@@ -35,7 +35,7 @@ angular.module('gservice', [])
             selectedLong = longitude;
 
             // Perform an AJAX call to get all of the records in the db.
-            $http.get('/users').success(function(response){
+            $http.get('/events').success(function(response){
 
                 // Convert the results into Google Map Format
                 locations = convertToMapPoints(response);
@@ -47,7 +47,7 @@ angular.module('gservice', [])
 
         // Private Inner Functions
         // --------------------------------------------------------------
-        // Convert a JSON of users into map points
+        // Convert a JSON of events into map points
         var convertToMapPoints = function(response){
 
             // Clear the locations holder
