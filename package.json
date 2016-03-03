@@ -23,8 +23,10 @@
     "compression": "^1.6.1",
     "dotenv": "^2.0.0",
     "express": "^4.13.4",
+    "jsonwebtoken": "^5.7.0",
     "lodash": "^4.2.1",
     "mongoose": "^4.4.2",
-    "timestamp": "0.0.1"
+    "timestamp": "0.0.1",
+    "method-override": "~2.1.2"
   }
 }
