@@ -3,7 +3,7 @@
 <html class="no-js" ng-app="meanMapApp">
 <head>
     <meta charset="utf-8">
-    <title>Scotch MEAN Map</title>
+    <title>Comunidad Conectada</title>
     <meta name="description" content="An example demonstrating Google Map integration with MEAN Apps">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
@@ -32,75 +32,44 @@
 <div class="container">
     <div class="header">
         <ul class="nav nav-pills pull-right">
-            <li active><a href="">Join the Team</a></li>
-            <li disabled><a href="">Find Teammates</a></li>
+            <li active><a href="">Ayudanos</a></li>
+            <li disabled><a href="">Buscar Eventos</a></li>
         </ul>
-        <h3 class="text-muted">The Scotch MEAN MapApp</h3>
+        <h3 class="text-muted">Comunidad Conectada</h3>
     </div>
     <!-- Map and Side Panel -->
     <div class="row content">
         <!-- Google Map -->
-        <div class="col-md-7">
+        <div class="col-md-9 con-xs-12">
             <div id="map"><img src="holder.js/645x645"></div>
         </div>
         <!-- Side Panel -->
-        <div class="col-md-5">
+        <div class="col-md-3 con-xs-12">
             <div class="panel panel-default">
                 <!-- Panel Title -->
                 <div class="panel-heading">
-                    <h2 class="panel-title text-center">Join the Scotch Team! <span class="glyphicon glyphicon-map-marker"></span></h2>
+                    <h2 class="panel-title text-center">Agregar evento <span class="glyphicon glyphicon-map-marker"></span></h2>
                 </div>
                 <!-- Panel Body -->
                 <div class="panel-body">
                     <!-- Creates Form (novalidate disables HTML validation, Angular will control) -->
-                    <form name ="addForm" novalidate>
+                    <form name ="addForm" novalidate ng-submit="createEvent()">
                         <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
                         <div class="form-group">
-                            <label for="username">Username <span class="badge">All fields required</span></label>
-                            <input type="text" class="form-control" id="username" placeholder="OldandGold" ng-model="formData.username" required>
-                        </div>
-                        <label class="radio control-label">Gender</label>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="radiomale" value="Male" ng-model="formData.gender">
-                                Male
-                            </label>
-                        </div>
-                        <div class="radio" required>
-                            <label>
-                                <input type="radio" name="optionsRadios" id="radiofemale" value="Female" ng-model="formData.gender">
-                                Female
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="radioother" value="What's it to ya?" ng-model="formData.gender">
-                                What's it to ya?
-                            </label>
+                            <label for="name">Nombre </label>
+                            <input type="text" class="form-control" id="name" placeholder="nombre del evento" ng-model="formData.eventname" required>
                         </div>
                         <div class="form-group">
-                            <label for="age">Age</label>
-                            <input type="number" class="form-control" id="age" placeholder="72" ng-model="formData.age" required>
+                            <label for="latitude">Latitud</label>
+                            <input type="text" class="form-control" id="latitude" value="-32.880" ng-model="formData.latitude">
                         </div>
                         <div class="form-group">
-                            <label for="language">Favorite Language</label>
-                            <input type="text" class="form-control" id="language" placeholder="Fortran" ng-model="formData.favlang" required>
+                            <label for="longitude">Longitud</label>
+                            <input type="text" class="form-control" id="longitude" value="-68.860" ng-model="formData.longitude">
                         </div>
-                        <div class="form-group">
-                            <label for="latitude">Latitude</label>
-                            <input type="text" class="form-control" id="latitude" value="39.500" ng-model="formData.latitude" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label for="longitude">Longitude</label>
-                            <input type="text" class="form-control" id="longitude" value="-98.350" ng-model="formData.longitude" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label for="verified">HTML5 Verified Location? <span><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-refresh"></span></button></span></label>
-                            <input type="text" class="form-control" id="verified" placeholder= "Nope (Thanks for spamming my map...)" ng-model="formData.htmlverified" readonly>
-                        </div>
-                        <!-- Submit button. Note that its tied to createUser() function from mainCtrl. Also note ng-disabled logic which prevents early submits.  -->
+                        <!-- Submit button. Note that its tied to createUser() function from addCtrl. Also note ng-disabled logic which prevents early submits.  -->
 
-                         <button type="submit" class="btn btn-danger btn-block" ng-click="createUser()" ng-disabled="addForm.$invalid">Submit</button>
+                         <button type="submit" class="btn btn-danger btn-block"  ng-disabled="addForm.$invalid">Submit</button>
                     </form>
                 </div>
             </div>
@@ -109,8 +78,8 @@
     <hr/>
     <!-- Footer -->
     <div class="footer">
-        <p class="text-center"><span class="glyphicon glyphicon-check"></span> Created by Ahmed Haque for Scotch IO -
-            <a href="https://scotch.io/">App Tutorial</a> | <a href="https://github.com/afhaque/MeanMapAppV2.0">Github Repo</a></p>
+        <p class="text-center"><span class="glyphicon glyphicon-check"></span> Comunidad Conectada
+            | <a href="https://github.com/pachirulo/comunidadconectada">Github Repo</a></p>
     </div>
 </div>
 </body>
