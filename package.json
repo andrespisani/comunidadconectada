@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "method-override": "~2.1.2",
     "mongoose": "^4.4.2",
     "morgan": "^1.7.0",
-    "timestamp": "0.0.1"
+    "timestamp": "0.0.1",
+    "bower": "0.6.x"
   }
 }
